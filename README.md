@@ -50,72 +50,6 @@ sudo rmdir $MOUNT_POINT
 echo "MATLAB installation completed successfully."
 
 
-```markdown
-Copy code
-# MATLAB Installation on Ubuntu
-
-This guide provides step-by-step instructions for downloading and installing MATLAB on Ubuntu using a bash script. The script will download the MATLAB ISO, mount it, create the necessary installation input file, and run the installer in silent mode.
-
-## Prerequisites
-
-- Ubuntu 22.04 or later
-- Sufficient disk space for the MATLAB installation
-- File Installation Key and License File
-
-## Steps
-
-### 1. Create the Installation Script
-
-Open a terminal and create a new bash script:
-
-```bash
-nano install_matlab.sh
-Copy and paste the following script into the nano editor:
-
-bash
-Copy code
-#!/bin/bash
-
-# Define variables
-URL="http://swrepo.iitkgp.ac.in/Matlab2023B/R2023b_Linux.iso"
-OUTPUT_PATH="/tmp/R2023b_Linux.iso"
-MOUNT_POINT="/mnt/matlab_iso"
-INSTALL_KEY="YOUR_FILE_INSTALLATION_KEY" # Replace with your actual installation key
-LICENSE_FILE_PATH="/home/your_username/Downloads/network (1).lic" # Replace with the actual path to your license file
-
-# Create a temporary directory for the download
-mkdir -p /tmp
-
-# Download the ISO
-wget -O $OUTPUT_PATH $URL
-
-# Create mount point
-sudo mkdir -p $MOUNT_POINT
-
-# Mount the ISO
-sudo mount -o loop $OUTPUT_PATH $MOUNT_POINT
-
-# Create installer input file
-INSTALLER_INPUT="/tmp/installer_input.txt"
-cat <<EOT > $INSTALLER_INPUT
-destinationFolder=/usr/local/MATLAB/R2023b
-fileInstallationKey=$INSTALL_KEY
-licensePath=$LICENSE_FILE_PATH
-agreeToLicense=yes
-mode=silent
-EOT
-
-# Run the installer
-sudo $MOUNT_POINT/install -inputFile $INSTALLER_INPUT
-
-# Unmount the ISO
-sudo umount $MOUNT_POINT
-
-# Clean up
-rm -rf /tmp/R2023b_Linux.iso /tmp/installer_input.txt
-sudo rmdir $MOUNT_POINT
-
-echo "MATLAB installation completed successfully."
 2. Replace Placeholders
 Replace YOUR_FILE_INSTALLATION_KEY with your actual MATLAB file installation key.
 Replace /home/your_username/Downloads/network (1).lic with the path to your MATLAB license file.
@@ -151,11 +85,3 @@ After running the script, you can verify the MATLAB installation by launching MA
 bash
 Copy code
 /usr/local/MATLAB/R2023b/bin/matlab
-Summary
-By following these steps, you can automate the download, mounting, and installation of MATLAB on your Ubuntu machine. Make sure to replace the placeholders with your actual installation key and license file path before running the script.
-```
-
-sql
-Copy code
-
-This README provides a clear guide on how to set up and run the installation script on an Ubu
