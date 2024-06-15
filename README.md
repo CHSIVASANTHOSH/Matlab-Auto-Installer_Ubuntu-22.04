@@ -47,7 +47,7 @@ sudo umount $MOUNT_POINT
 rm -rf /tmp/R2023b_Linux.iso /tmp/installer_input.txt
 sudo rmdir $MOUNT_POINT
 
-echo "MATLAB installation completed successfully."
+echo "MATLAB installation completed successfully." ```
 
 
 2. Replace Placeholders
