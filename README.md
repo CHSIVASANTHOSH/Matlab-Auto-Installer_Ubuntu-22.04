@@ -91,7 +91,7 @@ Automation script to automatically download and install the MATLAB .iso file and
 Run the following command to make the script executable:
 
 ```bash
-chmod +x install_matlab.sh
+sudo chmod +x install_matlab.sh
 ```
 ### 6. Run the Script
 Execute the script using sudo:
