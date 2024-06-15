@@ -6,7 +6,7 @@ Automation script where It automatically downloads and installs the Matlab .iso 
 - ```cd Downloads```
      ```ls ```
 - Create a install_matlab.sh  file by opening terminal pressing ```ctl+alt+t``` and in terminal type  ```sudo nano install_matlab.sh``` and paste
-- ```
+- ```markdown
   #!/bin/bash
 
 # Define variables
@@ -47,4 +47,5 @@ sudo umount $MOUNT_POINT
 rm -rf /tmp/R2023b_Linux.iso /tmp/installer_input.txt
 sudo rmdir $MOUNT_POINT
 
-echo "MATLAB installation completed successfully."   ```
+echo "MATLAB installation completed successfully." 
+```
