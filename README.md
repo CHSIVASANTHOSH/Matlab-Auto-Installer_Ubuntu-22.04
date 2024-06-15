@@ -6,14 +6,14 @@ Automation script where It automatically downloads and installs the Matlab .iso 
 - ```cd Downloads```
      ```ls ```
 - Create a install_matlab.sh  file by opening terminal pressing ```ctl+alt+t``` and in terminal type  ```sudo nano install_matlab.sh``` and paste
-- ```markdown
-  #!/bin/bash
+```bash
+#!/bin/bash
 # Define variables
-URL="http://swrepo.iitkgp.ac.in/Matlab2023B/R2023b_Linux.iso" #add any URL you have to download it 
+URL="http://swrepo.iitkgp.ac.in/Matlab2023B/R2023b_Linux.iso" # Add any URL you have to download it 
 OUTPUT_PATH="/tmp/R2023b_Linux.iso"
 MOUNT_POINT="/mnt/matlab_iso"
-INSTALL_KEY="xxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxx-xxxxxxxx" #installation key
-LICENSE_FILE_PATH="/path/to/licensce_file.lic" # Replace with the actual path to your license fi>
+INSTALL_KEY="xxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxx-xxxxxxxx" # Installation key
+LICENSE_FILE_PATH="/path/to/license_file.lic" # Replace with the actual path to your license file
 
 # Create a temporary directory for the download
 mkdir -p /tmp
@@ -26,6 +26,7 @@ sudo mkdir -p $MOUNT_POINT
 
 # Mount the ISO
 sudo mount -o loop $OUTPUT_PATH $MOUNT_POINT
+
 # Create installer input file
 INSTALLER_INPUT="/tmp/installer_input.txt"
 cat <<EOT > $INSTALLER_INPUT
@@ -46,5 +47,4 @@ sudo umount $MOUNT_POINT
 rm -rf /tmp/R2023b_Linux.iso /tmp/installer_input.txt
 sudo rmdir $MOUNT_POINT
 
-echo "MATLAB installation completed successfully." 
-```
+echo "MATLAB installation completed successfully."
