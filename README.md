@@ -8,7 +8,6 @@ Automation script where It automatically downloads and installs the Matlab .iso 
 - Create a install_matlab.sh  file by opening terminal pressing ```ctl+alt+t``` and in terminal type  ```sudo nano install_matlab.sh``` and paste
 - ```markdown
   #!/bin/bash
-
 # Define variables
 URL="http://swrepo.iitkgp.ac.in/Matlab2023B/R2023b_Linux.iso" #add any URL you have to download it 
 OUTPUT_PATH="/tmp/R2023b_Linux.iso"
