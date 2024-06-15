@@ -50,7 +50,7 @@ sudo rmdir $MOUNT_POINT
 echo "MATLAB installation completed successfully."
 
 
-markdown
+```markdown
 Copy code
 # MATLAB Installation on Ubuntu
 
@@ -153,6 +153,7 @@ Copy code
 /usr/local/MATLAB/R2023b/bin/matlab
 Summary
 By following these steps, you can automate the download, mounting, and installation of MATLAB on your Ubuntu machine. Make sure to replace the placeholders with your actual installation key and license file path before running the script.
+```
 
 sql
 Copy code
