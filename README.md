@@ -9,7 +9,7 @@ Automation script to automatically download and install the MATLAB .iso file and
 1. Open PowerShell and run the following command to transfer the license file to your Ubuntu system:
 
     ```powershell
-    scp C:/Users/user_name/Downloads/network (1).lic remote_username@remote_user_ip:/home/remote_user_name/Downloads
+    scp "C:/Users/user_name/Downloads/network (1).lic" remote_username@remote_user_ip:/home/remote_user_name/Downloads
     ```
 
 2. Verify the transfer on the remote system by navigating to the Downloads directory:
